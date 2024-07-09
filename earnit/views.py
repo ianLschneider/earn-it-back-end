@@ -28,7 +28,7 @@ class EarnerTasks(generics.ListAPIView):
         Gets tasks belonging to a specific earner.
         """
         return super().get_queryset().filter(
-            earner_id=self.kwargs['pk']
+            earner=self.kwargs['pk']
         )
 
 

@@ -10,7 +10,7 @@ class EarnerSerializer(serializers.HyperlinkedModelSerializer):
 class TaskSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Task
-		fields = ['id', 'earner_id', 'task', 'completed', 'points', 'iconType','completeByDate', 'createdOnDate', 'modifiedOnDate']
+		fields = ['id', 'earner', 'task', 'completed', 'points', 'iconType','completeByDate', 'createdOnDate', 'modifiedOnDate']
 		
 class RewardSerializer(serializers.ModelSerializer):
 	class Meta:
