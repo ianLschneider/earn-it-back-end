@@ -15,4 +15,5 @@ class TaskSerializer(serializers.ModelSerializer):
 class RewardSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Reward
-		fields = ['id', 'earner', 'reward', 'points', 'iconType', 'createdOnDate', 'modifiedOnDate']
+		#'earner',
+		fields = ['id', 'name', 'points', 'iconType', 'createdOnDate', 'modifiedOnDate']

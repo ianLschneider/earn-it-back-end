@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from earnit.views import EarnerViewSet, TaskViewSet, EarnerTasks, RewardViewSet, EarnerRewards
+from earnit.views import EarnerViewSet, TaskViewSet, EarnerTasks, RewardViewSet
+#, EarnerRewards
 
 router = routers.DefaultRouter()
 router.register(r'earners', EarnerViewSet)
@@ -28,7 +29,7 @@ router.register(r'rewards', RewardViewSet)
 
 urlpatterns = [
     path('<int:pk>/tasks/', EarnerTasks.as_view()),
-    path('<int:pk>/rewards/', EarnerRewards.as_view()),
+    # path('<int:pk>/rewards/', EarnerRewards.as_view()),
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
 ]

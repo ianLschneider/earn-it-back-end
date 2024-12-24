@@ -20,8 +20,8 @@ class Task(models.Model):
 
 
 class Reward(models.Model):
-    earner = models.ManyToManyField(Earner)
-    reward = models.CharField(max_length=200)
+    # earner = models.ManyToManyField(Earner)
+    name = models.CharField(max_length=200)
     iconType = models.CharField(max_length=20)
     points = models.IntegerField()
     createdOnDate = models.DateTimeField(auto_now_add=True)
